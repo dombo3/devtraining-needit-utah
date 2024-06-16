@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sysevent_email_action">
     <sysevent_email_action action="INSERT_OR_UPDATE">
-        <action_insert>true</action_insert>
+        <action_insert>false</action_insert>
         <action_update>false</action_update>
         <active>true</active>
         <advanced_condition/>
@@ -36,12 +36,14 @@
         <item_table/>
         <mandatory>false</mandatory>
         <message/>
-        <message_html><![CDATA[<p><strong>Dear ${assigned_to.first_name}</strong></p>
-<p><strong>An overdue NeedIt Task is assigned to you: </strong></p>
-<p><strong>Number: ${number}</strong></p>
-<p><strong>Short description: ${short_description}<br /></strong></p>
-<p><strong>${mail_script:CountOverdueNeedItTasksAssignedTo} </strong></p>
-<p><strong>Click here to view the NeedIt Task record: ${URI_REF} </strong></p>]]></message_html>
+        <message_html><![CDATA[<p>Dear ${assigned_to.first_name}</p>
+<p>An overdue NeedIt Task is assigned to you:</p>
+<p>Number: ${number}</p>
+<p>Short description: ${short_description}</p>
+<p>Please complete this task as soon as possible.</p>
+<p>${mail_script:CountOverdueNeedItTasksAssignedTo}</p>
+<p>${mailto:mailto.closeneedittask}</p>
+<p>Click here to view the NeedIt Task record: ${URI_REF}</p>]]></message_html>
         <message_list/>
         <message_text/>
         <name>Overdue NeedIt Task</name>
@@ -59,21 +61,21 @@
         <subscribable>false</subscribable>
         <sys_class_name>sysevent_email_action</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2024-01-28 11:55:09</sys_created_on>
+        <sys_created_on>2024-06-16 18:31:24</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>8a2109419384c210773c703efaba1056</sys_id>
+        <sys_id>113bdf0e477a02109f0aee2f316d4321</sys_id>
         <sys_mod_count>3</sys_mod_count>
         <sys_name>Overdue NeedIt Task</sys_name>
         <sys_overrides/>
         <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
         <sys_policy/>
         <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
-        <sys_update_name>sysevent_email_action_8a2109419384c210773c703efaba1056</sys_update_name>
+        <sys_update_name>sysevent_email_action_113bdf0e477a02109f0aee2f316d4321</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-01-28 14:38:07</sys_updated_on>
+        <sys_updated_on>2024-06-16 19:45:15</sys_updated_on>
         <sys_version>2</sys_version>
-        <template/>
+        <template display_value="Unsubscribe and Preferences">7ed0481f3b0b2200c869c2c703efc487</template>
         <type>email</type>
         <weight>0</weight>
     </sysevent_email_action>
